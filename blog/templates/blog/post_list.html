@@ -7,6 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 </head>
 <body>
-  <p>test</p>
+  <div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+  </div>
+
+  {% for post in posts %}
+      <div>
+          <p>published: {{ post.published_date }}</p>
+          <h1><a href="">{{ post.title }}</a></h1>
+          <p>{{ post.text|linebreaksbr }}</p>
+      </div>
+  {% endfor %}
 </body>
 </html>
